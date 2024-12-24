@@ -31,7 +31,7 @@ class Connect4Game {
             if (!this.gameActive)
                 return;
             const statusElement = document.getElementById('status');
-            statusElement.textContent = "Twitch chat's turn! Type a number 1-7";
+            statusElement.textContent = "Glowy's chat's turn! Type a number 1-7";
             try {
                 const column = yield this.twitchChat.collectUntilNumber();
                 this.makeMove(column - 1); // Convert 1-7 to 0-6
