@@ -1,0 +1,12 @@
+{
+  "name": "connect4-game",
+  "version": "1.0.0",
+  "description": "A simple Connect 4 game",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
