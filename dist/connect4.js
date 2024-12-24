@@ -31,7 +31,7 @@ class Connect4Game {
             if (!this.gameActive)
                 return;
             const statusElement = document.getElementById('status');
-            statusElement.textContent = "Glowy's chat's turn! Type a number 1-7";
+            statusElement.textContent = "Twitch chat's turn! Type a number 1-7";
             try {
                 const column = yield this.twitchChat.collectUntilNumber();
                 this.makeMove(column - 1); // Convert 1-7 to 0-6
@@ -111,8 +111,8 @@ class Connect4Game {
                 cellElement.className = 'cell';
                 cellElement.dataset.col = col.toString();
                 cellElement.style.backgroundColor =
-                    this.board[row][col] === 0 ? 'white' :
-                        this.board[row][col] === 1 ? 'red' : 'yellow';
+                    this.board[row][col] === 0 ? 'var(--bg-color)' :
+                        this.board[row][col] === 1 ? 'var(--player-red)' : 'var(--player-yellow)';
                 if (this.currentPlayer === 1 && this.gameActive) {
                     cellElement.addEventListener('click', () => this.makeMove(col));
                 }

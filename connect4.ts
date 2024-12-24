@@ -111,8 +111,8 @@ class Connect4Game {
                 cellElement.className = 'cell';
                 cellElement.dataset.col = col.toString();
                 cellElement.style.backgroundColor = 
-                    this.board[row][col] === 0 ? 'white' : 
-                    this.board[row][col] === 1 ? 'red' : 'yellow';
+                    this.board[row][col] === 0 ? 'var(--bg-color)' : 
+                    this.board[row][col] === 1 ? 'var(--player-red)' : 'var(--player-yellow)';
                 
                 if (this.currentPlayer === 1 && this.gameActive) {
                     cellElement.addEventListener('click', () => this.makeMove(col));
